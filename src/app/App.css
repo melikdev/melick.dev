@@ -1,0 +1,8 @@
+#project {
+  background: linear-gradient(
+    0deg,
+    rgb(34, 35, 38) 9%,
+    rgba(33, 34, 37, 0.89) 42%,
+    rgba(34, 35, 38, 0) 156%
+  );
+}
