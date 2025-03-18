@@ -92,7 +92,7 @@ const Projects = () => {
               'Prisma',
             ]}
             source="https://github.com/melikdev/next-invoice-tracker"
-            demoUrl="https://melik.dev"
+            demoUrl="https://invoicetracker.melik.dev/"
             imgUrl="/img/demo-nuance-small.gif"
           />
         </div>
