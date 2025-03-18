@@ -4,9 +4,10 @@ import useScroll from '@/hooks/useScroll';
 import Projects from '../components/Projects';
 import { cn } from '@/lib/utils';
 import Resume from '../components/Resume';
-import { ArrowDown } from 'lucide-react';
+import { ArrowDown, Mouse } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import Contact from '../components/Contact';
 
 type SectionProps = {
   children: React.ReactNode;
@@ -22,7 +23,7 @@ const Section = ({ children, id, className }: SectionProps) => {
       id={id}
       className={cn(
         className,
-        `flex flex-col gap-5 transition-all duration-300 ease-in-out mt-40 scroll-m-20 ${
+        `flex flex-col gap-5 transition-all duration-300 ease-in-out scroll-m-20 ${
           scrolled ? '' : 'opacity-0'
         }`
       )}
@@ -33,11 +34,12 @@ const Section = ({ children, id, className }: SectionProps) => {
 };
 
 const Main = () => {
+  const { scrolled } = useScroll();
   return (
     <main className="flex flex-col">
       <section
         id="intro"
-        className="flex justify-center flex-col gap-5 text-white scroll-mt-10"
+        className="flex justify-center flex-col gap-5 text-white scroll-mt-0"
       >
         <h1 className="text-5xl font-bold">Hi, I&apos;m Melik.</h1>
         <h1 className="text-5xl font-bold">a Frontend Developer</h1>
@@ -49,8 +51,17 @@ const Main = () => {
             About Me <ArrowDown />
           </Link>
         </Button>
+        <Button
+          variant="ghost"
+          className={
+            scrolled ? 'hidden' : `hidden md:flex items-center mt-10 text-white`
+          }
+          size="lg"
+        >
+          <Mouse className="animate-bounce " /> Scroll to get to know me
+        </Button>
       </section>
-      <Section id="about-me">
+      <Section className="mt-30" id="about-me">
         <h1 className="text-md font-bold text-gray-500">About me</h1>
         <p className="text-white leading-8">
           I’m a curious and ambitious frontend developer who loves building
@@ -67,6 +78,9 @@ const Main = () => {
       </Section>
       <Section id="resume">
         <Resume />
+      </Section>
+      <Section id="contact">
+        <Contact />
       </Section>
     </main>
   );
