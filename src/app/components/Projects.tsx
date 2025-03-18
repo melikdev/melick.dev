@@ -76,7 +76,7 @@ const Projects = () => {
           <Project
             title="melik.dev Portfolio"
             tags={['Next.js', 'TypeScript', 'TailwindCSS', 'Shadcn']}
-            source="https://github.com/melikdev/next-invoice-tracker"
+            source="https://github.com/melikdev/melick.dev"
             demoUrl="https://melik.dev"
             imgUrl="/img/demo-nuance-small.gif"
           />
