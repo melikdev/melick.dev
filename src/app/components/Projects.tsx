@@ -81,7 +81,7 @@ const Projects = () => {
             imgUrl="/img/demo-nuance-small.gif"
           />
         </div>
-        <div className="mt-20 flex flex-col gap-5">
+        <div className="mt-5 flex flex-col gap-5">
           <Project
             title="Trackinvoice"
             tags={[
