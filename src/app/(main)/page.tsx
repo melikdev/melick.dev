@@ -79,7 +79,7 @@ const Main = () => {
       <Section id="resume">
         <Resume />
       </Section>
-      <Section id="contact">
+      <Section className="sm:hidden" id="contact">
         <Contact />
       </Section>
     </main>
