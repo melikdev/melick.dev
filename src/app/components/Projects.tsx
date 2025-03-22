@@ -2,7 +2,7 @@ import Link from 'next/link';
 import '@/app/App.css';
 import Image from 'next/image';
 import { Badge } from '@/components/ui/badge';
-import { GithubIcon } from 'lucide-react';
+import { GithubIcon, LinkIcon } from 'lucide-react';
 
 type ProjectProps = {
   tags?: string[];
@@ -36,7 +36,7 @@ const Project = ({ tags, title, source, imgUrl, demoUrl }: ProjectProps) => {
           className="flex gap-2 items-center text-sm"
           href={`${demoUrl}`}
         >
-          <GithubIcon size={20} />
+          <LinkIcon size={20} />
           Live demo
         </Link>
       </section>
@@ -81,7 +81,7 @@ const Projects = () => {
             imgUrl="/img/demo-nuance-small.gif"
           />
         </div>
-        <div className="mt-5 flex flex-col gap-5">
+        <div className="mt-10 flex flex-col gap-5">
           <Project
             title="Trackinvoice"
             tags={[

@@ -3,6 +3,8 @@
 import { Button } from '@/components/ui/button';
 import useScroll from '@/hooks/useScroll';
 import Link from 'next/link';
+import Contact from './Contact';
+import Resume from './Resume';
 // import Contact from './Contact';
 
 type NavButtonProps = {
@@ -58,11 +60,8 @@ const Sidebar = () => {
         <NavButton bg="#D5E3C3" width="50%" href="#resume" onScroll={scrolled}>
           Resume
         </NavButton>
-        <NavButton bg="#E3C3C3" width="60%" href="#contact" onScroll={scrolled}>
-          Contact
-        </NavButton>
       </section>
-      {/* {scrolled && <Contact />} */}
+      {scrolled && <Contact />}
     </main>
   );
 };
