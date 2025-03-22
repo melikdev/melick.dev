@@ -4,8 +4,6 @@ import { Button } from '@/components/ui/button';
 import useScroll from '@/hooks/useScroll';
 import Link from 'next/link';
 import Contact from './Contact';
-import Resume from './Resume';
-// import Contact from './Contact';
 
 type NavButtonProps = {
   bg: string;
